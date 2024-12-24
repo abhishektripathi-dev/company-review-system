@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Company Review System</title>
+        <link rel="stylesheet" href="../public/style.css">
+        <style>
+            /* form{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            } */
+        </style>
+    </head>
+    <body>
+        <h1>Company Review System</h1>
+
+        <main>
+            <section>
+                <form id="reviewForm" action="/" method="POST">
+                    <label for="name">Company Name</label><br>
+                    <input type="text" name="name" id="name" /><br>
+                    <label for="pros">Pros</label><br>
+                    <input type="text" name="pros" id="pros" /><br>
+                    <label for="cons">Cons</label><br>
+                    <input type="text" name="cons" id="cons" /><br><br>
+                    <label for="rating">Rating</label>
+                    <select name="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                  </select><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+
+            <section>
+                <!-- show according to search in form  -->
+                <form id="showForm" action="/" method="POST">
+                    <label for="name">Company Name</label><br>
+                    <input type="text" name="name" id="name" /><br>
+                    <input type="submit" value="Search">
+                </form>
+                <!-- Review will be appended here -->
+                <div id="append-section"></div>
+            </section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="../public/script.js"></script>
+    </body>
+</html>
