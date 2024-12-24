@@ -1,5 +1,4 @@
 const BASE_URL = 'http://localhost:3000';
-// public/script.js
 
 document.addEventListener('DOMContentLoaded', () => {
   const reviewForm = document.getElementById('reviewForm');
@@ -13,11 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
           appendSection.innerHTML = '<p>No reviews found for the specified company.</p>';
           return;
       }
+
+      // Calculate average rating
+      let totalRating = 0;
+      reviews.forEach((review) => {
+          totalRating += review.rating;
+      });
+      const averageRating = (totalRating / reviews.length).toFixed(1);  
+      
       reviews.forEach((review) => {
           const reviewElement = document.createElement('div');
           reviewElement.classList.add('review');
           reviewElement.innerHTML = `
               <h3>${review.companyName}</h3>
+              <h3>Overall Rating: ${averageRating}</h3>
+              <hr>
               <p><strong>Pros:</strong> ${review.pros}</p>
               <p><strong>Cons:</strong> ${review.cons}</p>
               <p><strong>Rating:</strong> ${review.rating}/5</p>
