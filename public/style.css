@@ -39,7 +39,7 @@ form label {
 }
 
 form input[type="text"],
-form select {
+form select, textarea {
   width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 10px;

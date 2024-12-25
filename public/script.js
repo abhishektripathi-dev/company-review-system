@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const reviewElement = document.createElement('div');
           reviewElement.classList.add('review');
           reviewElement.innerHTML = `
-              <h3>${review.companyName}</h3>
+              <h3>Company Name: ${review.companyName}</h3>
               <h3>Overall Rating: ${averageRating}</h3>
               <hr>
               <p><strong>Pros:</strong> ${review.pros}</p>

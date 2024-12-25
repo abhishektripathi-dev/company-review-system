@@ -19,12 +19,13 @@
         <main>
             <section>
                 <form id="reviewForm" action="/" method="POST">
-                    <label for="name">Company Name</label><br>
-                    <input type="text" name="name" id="name" /><br>
-                    <label for="pros">Pros</label><br>
-                    <input type="text" name="pros" id="pros" /><br>
-                    <label for="cons">Cons</label><br>
-                    <input type="text" name="cons" id="cons" /><br><br>
+                    <label for="name">Company Name</label>
+                    <input type="text" name="name" id="name" />
+                    <label for="pros">Pros</label>
+                    <!-- <input type="text" name="pros" id="pros" /><br> -->
+                    <textarea id="pros" name="pros" rows="4" cols="50"></textarea>
+                    <label for="cons">Cons</label>
+                    <textarea id="cons" name="cons" rows="4" cols="50"></textarea>
                     <label for="rating">Rating</label>
                     <select name="rating">
                         <option value="1">1</option>
@@ -32,19 +33,19 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                  </select><br><br>
+                  </select>
                     <button type="submit">Submit</button>
                 </form>
             </section>
-
+            <hr><hr>
             <section>
-                <!-- show according to search in form  -->
+                <!-- search by company name and show reviews  -->
                 <form id="showForm" action="/" method="POST">
-                    <label for="name">Company Name</label><br>
-                    <input type="text" name="name" id="name" /><br>
+                    <label for="name">Company Name</label>
+                    <input type="text" name="name" id="name" />
                     <input type="submit" value="Search">
                 </form>
-                <!-- Review will be appended here -->
+                <!-- Review will be append here -->
                 <div id="append-section"></div>
             </section>
         </main>
